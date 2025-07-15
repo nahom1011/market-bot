@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Store Multi-Lang</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-white to-blue-100 min-h-screen font-sans">
+
+  <div class="max-w-4xl mx-auto p-6">
+    <header class="mb-6">
+      <h1 class="text-4xl font-extrabold" id="header-title">Welcome to Mini Store</h1>
+      <p class="mt-2 text-sm" id="header-subtitle">
+        Browse & shop the best products. Earn 5 birr per referral.
+      </p>
+
+      <div class="flex gap-4 flex-wrap mt-4">
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search products..."
+          class="p-2 rounded border border-gray-300 flex-grow"
+        />
+        <select id="categoryFilter" class="p-2 rounded border border-gray-300">
+          <option value="all">All Categories</option>
+          <option value="shoes">Shoes</option>
+          <option value="perfumes">Perfumes</option>
+          <option value="cosmetics">Cosmetics</option>
+          <option value="wigs">Wigs</option>
+        </select>
+        <select id="langSelect" class="p-2 rounded border border-gray-300">
+          <option value="en">English</option>
+          <option value="am">Amharic</option>
+          <!-- Add more languages here -->
+        </select>
+      </div>
+    </header>
+
+    <section id="products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></section>
+  </div>
+
+  <script src="lang/en.js"></script>
+  <script src="lang/am.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

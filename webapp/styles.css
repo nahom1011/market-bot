@@ -1,0 +1,122 @@
+/* styles.css */
+
+/* Fade in animation from below */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade in animation with more lift for headers or sections */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Utility class to apply fade-in animation */
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+/* Utility class to apply stronger fade-in-up effect */
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+/* Optional: Add smooth transition to category/product buttons */
+.btn-smooth {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
+}
+.btn-smooth:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Home page hero or welcome banner */
+.hero-banner {
+  background: linear-gradient(to right, #a78bfa, #f472b6);
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fade-in-up 0.7s ease-out;
+}
+
+/* Filter dropdown styling */
+.filter-select {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e0;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+.filter-select:hover {
+  border-color: #7c3aed;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Optional: Tag or badge for rating count or product labels */
+.badge {
+  background-color: #facc15;
+  color: #1f2937;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+
+/* Navbar filter dropdowns */
+.navbar-filter {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.navbar-filter select {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background: #f9fafb;
+  font-size: 0.875rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.navbar-filter select:hover {
+  border-color: #7c3aed;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Search box styling */
+.search-box {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 0.875rem;
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.search-box:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.4);
+}
+
+.search-filter-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
